@@ -7,12 +7,12 @@ const passport = require('passport');
 const passportConfig = require('./services/auth');
 const MongoStore = require('connect-mongo')(session);
 const schema = require('./schema/schema');
-
+const keys = require('../config/keys');
 // Create a new Express application
 const app = express();
 
 // Replace with your mongoLab URI
-const MONGO_URI = 'mongodb://Julesy:brthrfnthrmthr17@ds245755.mlab.com:45755/auth-graphql';
+const MONGO_URI = 'mongodb://keys.username:keys.userpassword@ds245755.mlab.com:45755/auth-graphql';
 
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
 mongoose.Promise = global.Promise;
